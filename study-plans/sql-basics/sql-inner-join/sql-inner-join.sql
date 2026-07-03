@@ -7,4 +7,5 @@ FROM
     Employees e
 INNER JOIN
     Departments d ON e.dept_id=d.id
-    
+ORDER BY
+    e.name ASC;
