@@ -1,8 +1,5 @@
--- Write your SQL query here
-SELECT 
-    product, revenue, sale_date
-FROM 
-    sales
-ORDER BY
-    revenue DESC, sale_date ASC
-LIMIT 3 OFFSET 1;
+-- Returns: product, revenue, sale_date.
+select product, revenue, sale_date
+from sales
+order by revenue desc,sale_date asc
+LIMIT 3 OFFSET 1
