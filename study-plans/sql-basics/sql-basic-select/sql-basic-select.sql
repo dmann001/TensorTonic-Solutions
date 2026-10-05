@@ -1,6 +1,3 @@
--- Write your SQL query --
-SELECT 
-    product_name AS name,
-    category,
-    unit_price * units_in_stock AS inventory_value 
-FROM products
+-- Returns: name, category, inventory_value.
+select product_name as name, category, (unit_price*units_in_stock) as inventory_value
+from products
