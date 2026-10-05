@@ -1,8 +1,4 @@
--- Write your SQL query here
-SELECT 
-    name, subject,score
-FROM
-    students
-ORDER BY
-    score DESC,
-    name ASC
+-- Returns: name, subject, score.
+select name, subject,score
+from students
+order by score desc, name asc;
