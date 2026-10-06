@@ -26,7 +26,7 @@ The alias is declared right after the table name in FROM or JOIN. Once defined, 
 
 ### Ambiguous Columns
 
-When both tables have a column with the same name (e.g., `id`), you must prefix with the table name or alias. Without it, the database raises an ambiguous column error:
+When both tables have a column with the same name (e.g., id), you must prefix with the table name or alias. Without it, the database raises an ambiguous column error:
 
 ```sql
 -- Ambiguous: both tables have 'id'
