@@ -1,10 +1,5 @@
--- Write your SQL query here
-SELECT 
-    c1.username, 
-    COALESCE(c2.username, 'organic') as referrer_name
-FROM
-    user_referrals AS c1
-LEFT JOIN
-    user_referrals AS c2 ON
-    c1.referred_by=c2.id
-ORDER BY c1.username ASC
+-- Returns: username, referrer_name.
+select u.username, coalesce(r.username,'organic') as referrer_name
+from user_referrals u
+left join user_referrals r on u.referred_by=r.id
+order by u.username asc

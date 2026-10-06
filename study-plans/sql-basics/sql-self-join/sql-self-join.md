@@ -12,7 +12,7 @@ FROM my_table a
 JOIN my_table b ON a.some_fk = b.id;
 ```
 
-`a` and `b` are aliases for the same physical table. The query engine treats them as two independent copies for the purpose of the join.
+a and b are aliases for the same physical table. The query engine treats them as two independent copies for the purpose of the join.
 
 ### INNER vs LEFT Self Join
 
@@ -36,7 +36,7 @@ When the foreign key column is nullable, a LEFT JOIN is essential to retain unma
 
 ### Handling NULLs with COALESCE
 
-After a LEFT JOIN, unmatched rows produce NULL values. `COALESCE` replaces NULL with a default:
+After a LEFT JOIN, unmatched rows produce NULL values. COALESCE replaces NULL with a default:
 
 ```sql
 SELECT u.username,
@@ -59,7 +59,7 @@ LEFT JOIN user_referrals r1 ON u.referred_by = r1.id
 LEFT JOIN user_referrals r2 ON r1.referred_by = r2.id;
 ```
 
-**Hierarchy traversal:** Organizational charts with a `manager_id` column referencing the same table:
+**Hierarchy traversal:** Organizational charts with a manager_id column referencing the same table:
 
 ```sql
 SELECT e.name AS employee, m.name AS manager
