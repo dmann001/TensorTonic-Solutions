@@ -1,6 +1,6 @@
 ## Cross Join
 
-A `CROSS JOIN` produces the Cartesian product of two tables: every row from the left table is paired with every row from the right table. If the left table has N rows and the right table has M rows, the result contains N x M rows.
+A CROSS JOIN produces the Cartesian product of two tables: every row from the left table is paired with every row from the right table. If the left table has N rows and the right table has M rows, the result contains N x M rows.
 
 ### Syntax
 
@@ -17,7 +17,7 @@ SELECT a.col1, b.col2
 FROM table_a a, table_b b;
 ```
 
-Both forms produce identical results, but the explicit `CROSS JOIN` keyword is preferred because it signals intent clearly - the reader immediately knows a Cartesian product is deliberate rather than a forgotten join condition.
+Both forms produce identical results, but the explicit CROSS JOIN keyword is preferred because it signals intent clearly - the reader immediately knows a Cartesian product is deliberate rather than a forgotten join condition.
 
 ### When to Use CROSS JOIN
 
@@ -40,4 +40,4 @@ Because the output size is N x M, cross joins can produce very large result sets
 
 ### Ordering the Result
 
-A cross join does not guarantee any particular row order. To get deterministic output, always add an explicit `ORDER BY` clause. For grid-style reports, ordering by both columns alphabetically or by some priority field is standard practice.
+A cross join does not guarantee any particular row order. To get deterministic output, always add an explicit ORDER BY clause. For grid-style reports, ordering by both columns alphabetically or by some priority field is standard practice.

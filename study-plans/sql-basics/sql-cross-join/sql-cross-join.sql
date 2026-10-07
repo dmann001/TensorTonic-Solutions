@@ -1,4 +1,5 @@
-SELECT s.segment_name, m.metric_name
-FROM segments s
-CROSS JOIN metrics m
-ORDER BY segment_name ASC, metric_name ASC
+-- Returns: segment_name, metric_name.
+select s.segment_name, m.metric_name
+from segments s
+cross join metrics m
+order by s.segment_name asc,m.metric_name asc
