@@ -1,5 +1,5 @@
 -- Returns: username, referrer_name.
-select u.username, coalesce(r.username,'organic') as referrer_name
-from user_referrals u
-left join user_referrals r on u.referred_by=r.id
-order by u.username asc
+select c1.username, coalesce(c2.username, 'organic') as referrer_name
+from user_referrals c1 
+left join user_referrals c2 on c1.referred_by= c2.id
+order by c1.username asc
