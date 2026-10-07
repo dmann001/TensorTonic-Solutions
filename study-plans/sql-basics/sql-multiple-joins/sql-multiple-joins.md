@@ -78,7 +78,7 @@ For LEFT JOINs, order does matter semantically - the "left" table is the one tha
 
 **Using LEFT JOIN when INNER JOIN is needed**: This produces extra rows with NULLs for unmatched records. If your question asks for rows that exist in all tables, use INNER JOIN.
 
-**Ambiguous column names**: When two tables share a column name (e.g., `id`), you must qualify it with the table alias: `u.id` vs `ea.id`. Omitting the alias causes an ambiguity error.
+**Ambiguous column names**: When two tables share a column name (e.g., id), you must qualify it with the table alias: u.id vs ea.id. Omitting the alias causes an ambiguity error.
 
 ### Star Schema Pattern
 
