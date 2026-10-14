@@ -12,7 +12,7 @@ GROUP BY column;
 
 ### The Golden Rule
 
-Every column in the SELECT list must either appear in the GROUP BY clause or be wrapped in an aggregate function. If you SELECT `customer` and `SUM(amount)`, then `customer` must be in GROUP BY. Violating this rule produces an error in most databases.
+Every column in the SELECT list must either appear in the GROUP BY clause or be wrapped in an aggregate function. If you SELECT customer and SUM(amount), then customer must be in GROUP BY. Violating this rule produces an error in most databases.
 
 ### Common Aggregate Functions
 
