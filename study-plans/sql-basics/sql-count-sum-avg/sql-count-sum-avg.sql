@@ -1,8 +1,5 @@
--- Write your SQL query here
-SELECT category, 
-    COUNT(*) AS total_sales, 
-    SUM(AMOUNT) as total_revenue,
-    ROUND(AVG(discount),2) AS avg_discount
-FROM sales
-GROUP BY category
-ORDER BY total_revenue DESC, category ASC
+-- Returns: category, total_sales, total_revenue, avg_discount.
+select category, count(*) as total_sales,sum(amount) as total_revenue,round(avg(discount),2) as avg_discount
+from sales
+group by category
+order by total_revenue desc, category asc

@@ -4,8 +4,8 @@ COUNT, SUM, and AVG are the three most commonly used aggregate functions in SQL.
 
 ### COUNT(*) vs COUNT(col)
 
-- `COUNT(*)` counts every row in the group, including rows with NULLs.
-- `COUNT(col)` counts only rows where `col` is not NULL.
+- COUNT(*) counts every row in the group, including rows with NULLs.
+- COUNT(col) counts only rows where col is not NULL.
 
 ```sql
 -- Table: [10, NULL, 30]
@@ -35,7 +35,7 @@ SELECT AVG(value) FROM t;
 
 ### ROUND for Clean Output
 
-Aggregate results often produce long decimals. Use `ROUND(value, n)` to limit decimal places:
+Aggregate results often produce long decimals. Use ROUND(value, n) to limit decimal places:
 
 ```sql
 SELECT ROUND(AVG(price), 2) AS avg_price FROM products;
@@ -44,5 +44,5 @@ SELECT ROUND(AVG(price), 2) AS avg_price FROM products;
 ### NULL Gotchas
 
 - SUM of an empty group or all-NULL column returns NULL, not 0
-- Use `COALESCE(SUM(col), 0)` if you need 0 instead of NULL
+- Use COALESCE(SUM(col), 0) if you need 0 instead of NULL
 - AVG excludes NULLs from the count, which can produce surprising results if you expect them to count as zero
