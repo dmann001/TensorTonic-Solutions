@@ -19,7 +19,7 @@ GROUP BY department
 HAVING COUNT(*) >= 5;
 ```
 
-This returns only departments with 5 or more employees. Writing `WHERE COUNT(*) >= 5` would produce an error.
+This returns only departments with 5 or more employees. Writing WHERE COUNT(*) >= 5 would produce an error.
 
 ### WHERE vs HAVING
 
